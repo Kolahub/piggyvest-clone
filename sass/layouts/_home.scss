@@ -1,0 +1,225 @@
+.home {
+    background-color: $greyish-blue;
+    padding-top: 18rem;
+    padding-bottom: 12rem;
+    overflow-x: hidden;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        &--left {
+            width: 50%;
+            max-width: 45rem;
+        }
+
+        &--right {
+            position: relative;
+            width: 70rem;
+            max-width: 50rem;
+            height: 52rem;
+            animation: floating 2s ease-in-out infinite;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            &__pic {
+                position: relative;
+            }
+        }
+
+        &--pin {
+            position: absolute;
+            width: 20rem;
+            z-index: 500;
+
+            &__1 {
+                top: 15rem;
+                left: -10rem;
+            }
+
+            &__2 {
+                top: 10rem;
+                right: -8rem;
+            }
+
+            &__3 {
+                bottom: 10rem;
+                left: -10rem;
+            }
+
+            &__4 {
+                bottom: 12rem;
+                right: -8rem;
+            }
+
+            &__5 {
+                bottom: -2rem;
+                left: 50%;
+                transform: translateX(-50%)
+            }
+
+            @include respond(lg) {
+                &__1 {
+                    top: 15rem;
+                    left: -10rem;
+                }
+    
+                &__2 {
+                    top: 10rem;
+                    right: -8rem;
+                }
+    
+                &__3 {
+                    bottom: 22rem;
+                    left: -10rem;
+                }
+    
+                &__4 {
+                    bottom: 22rem;
+                    right: -8rem;
+                }
+    
+                &__5 {
+                    bottom: 8rem;
+                    left: 50%;
+                    transform: translateX(-50%)
+                }
+            }
+
+            @include respond(sm) {
+                width: 18rem;
+                &__1 {
+                    top: 15rem;
+                    left: -3rem;
+                }
+    
+                &__2 {
+                    top: 10rem;
+                    right: -2rem;
+                }
+    
+                &__3 {
+                    bottom: 28rem;
+                    left: -3rem;
+                }
+    
+                &__4 {
+                    bottom: 28rem;
+                    right: -2rem;
+                }
+    
+                &__5 {
+                    bottom: 17rem;
+                    left: 50%;
+                    transform: translateX(-50%)
+                }
+            }
+        }
+    }
+
+
+    @include respond(tab-land) {
+        &__content {
+          @include fullWidthMargin;
+        }
+      }
+
+      @include respond(lg) { 
+        &__content {
+            flex-direction: column;
+            gap: 5rem;
+            &--left {
+                width: 100%;
+                max-width: 60rem;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            &--right {
+                width: 100%;
+                height: 62rem;
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            &--download {
+                justify-content: center
+            }
+        }
+      }
+
+     @include respond(md) {
+        &__content {
+            &--download {
+                gap: 7px;
+            }
+        }
+
+        padding-bottom: 0;
+     }
+    }
+
+.securitylock {
+   background-color: $greyish-blue;
+    padding: 5rem 0;
+
+    &__content {
+        &--sub {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3rem;
+            max-width: 80rem;
+
+            @include respond (lg) {
+                flex-direction: column;
+                text-align: center;
+                max-width: 70rem;
+                margin: 0 auto;
+            }
+
+            @include respond (sm) { 
+                @include fullWidthMargin;
+            }
+        }
+        &--heading {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+
+            @include respond(md) { 
+                font-size: 3rem;
+            }
+        }
+
+        &--typo {
+            font-size: 1.6rem;
+            @include respond(md) { 
+                font-size: 2rem;
+            }
+        }
+
+        &--subtypo {
+            display: flex;
+            align-items: end;
+            gap: .8rem;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-top: 1.4rem;
+
+            @include respond (lg) { 
+                justify-content: center;
+            }
+        }
+    }
+}
